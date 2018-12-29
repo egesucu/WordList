@@ -1,0 +1,6 @@
+framework module Pods_WordList {
+  umbrella header "Pods-WordList-umbrella.h"
+
+  export *
+  module * { export * }
+}
