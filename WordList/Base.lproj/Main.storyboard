@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vuz-gT-AmR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YoJ-qR-smF">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,6 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My WordList" id="f2y-hc-G5S">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="d8f-2D-jIY">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="J5n-ad-Xt5" id="NYA-iI-Lk0"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3ru-kM-Er9">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -76,6 +81,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vry-tU-JXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.985507246377" y="-28.532608695652176"/>
+        </scene>
+        <!--Words-->
+        <scene sceneID="Ra3-xm-ARb">
+            <objects>
+                <collectionViewController id="6nt-MK-uox" customClass="HomeCollectionViewController" customModule="WordList" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="89f-Jn-vyE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="nII-ws-CuR">
+                            <size key="itemSize" width="127" height="61"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.55000000000000004" contentMode="center" reuseIdentifier="Word" id="tcW-Qn-pKb" customClass="HomeCollectionViewCell" customModule="WordList" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="127" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="127" height="61"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCA-in-TLm">
+                                            <rect key="frame" x="43" y="20.666666666666668" width="41" height="20.000000000000004"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.730832449" green="0.85720561880000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="kCA-in-TLm" firstAttribute="centerY" secondItem="tcW-Qn-pKb" secondAttribute="centerY" id="Vy1-Ls-oUF"/>
+                                    <constraint firstItem="kCA-in-TLm" firstAttribute="centerX" secondItem="tcW-Qn-pKb" secondAttribute="centerX" id="Zq9-I9-yM1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="wordLabel" destination="kCA-in-TLm" id="X83-tQ-dji"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6nt-MK-uox" id="pGa-YK-DvA"/>
+                            <outlet property="delegate" destination="6nt-MK-uox" id="ktx-De-sXl"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Words" id="FcU-re-0WH">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="9d8-IB-4un"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="H97-JZ-uHT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="6nt-MK-uox" id="v3t-9k-7y4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Nwn-fH-hfu">
+                            <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                            <inset key="largeContentSizeImageInsets" minX="1" minY="0.0" maxX="0.0" maxY="1"/>
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addWordIntoList:" destination="6nt-MK-uox" id="ddB-Gp-zqp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQ9-Rd-nHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="698.64130434782612"/>
         </scene>
         <!--Preview-->
         <scene sceneID="QEx-Fd-aar">
@@ -124,7 +201,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KV-s9-C9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="376"/>
+            <point key="canvasLocation" x="3318.840579710145" y="375.81521739130437"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X8E-jf-JpN">
+            <objects>
+                <viewController restorationIdentifier="Intro" storyboardIdentifier="Intro" id="YoJ-qR-smF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ZE-e6-12o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-Or-JqG">
+                                <rect key="frame" x="154.66666666666666" y="249" width="104.99999999999997" height="45"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.45098039220000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Vzo-4b-sG5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="List View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="vuz-gT-AmR" kind="show" identifier="ListView" id="EZV-ed-f7m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hke-Kq-l90">
+                                <rect key="frame" x="147.66666666666666" y="366" width="118.99999999999997" height="45"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.45098039220000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Card View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="d9u-Db-tne" kind="show" identifier="CardView" id="Vxm-Zm-s3y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which view do you prefer to see?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEX-3F-yMM">
+                                <rect key="frame" x="54" y="93" width="306.33333333333331" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.34837309950000001" blue="0.26364865929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="pCW-Or-JqG" firstAttribute="centerX" secondItem="EhB-Ct-Ilc" secondAttribute="centerX" id="2KQ-2n-11p"/>
+                            <constraint firstItem="hke-Kq-l90" firstAttribute="top" secondItem="pCW-Or-JqG" secondAttribute="bottom" constant="72" id="HaB-rH-hta"/>
+                            <constraint firstItem="HEX-3F-yMM" firstAttribute="top" secondItem="EhB-Ct-Ilc" secondAttribute="top" constant="73" id="Jpn-hj-2qG"/>
+                            <constraint firstItem="hke-Kq-l90" firstAttribute="centerX" secondItem="EhB-Ct-Ilc" secondAttribute="centerX" id="KQa-0H-MPF"/>
+                            <constraint firstItem="HEX-3F-yMM" firstAttribute="leading" secondItem="hke-Kq-l90" secondAttribute="leading" constant="-93.666666666666657" id="Zv2-qV-ruu"/>
+                            <constraint firstItem="HEX-3F-yMM" firstAttribute="centerX" secondItem="EhB-Ct-Ilc" secondAttribute="centerX" id="bZz-p4-iwE"/>
+                            <constraint firstItem="pCW-Or-JqG" firstAttribute="top" secondItem="4ZE-e6-12o" secondAttribute="top" constant="249" id="lD7-SQ-TTp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EhB-Ct-Ilc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpX-nd-wpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1136.231884057971" y="330.97826086956525"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D5V-Rt-fq6">
@@ -153,6 +297,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXb-LE-WGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="-28.532608695652176"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yoE-iS-KFP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d9u-Db-tne" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="8lu-kV-FrQ">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.34837309950000001" blue="0.26364865929999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6nt-MK-uox" kind="relationship" relationship="rootViewController" id="T08-5F-EKj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKW-Ai-AK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="699"/>
         </scene>
     </scenes>
 </document>

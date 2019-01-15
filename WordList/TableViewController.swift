@@ -19,6 +19,7 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getAccess()
         words = realm.objects(Word.self)
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
@@ -164,5 +165,19 @@ class TableViewController: UITableViewController {
         UNUserNotificationCenter.current().add(anotherRequest, withCompletionHandler: nil)
         
     }
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        
+        if self.presentingViewController != nil {
+            self.dismiss(animated: false, completion: {
+                self.navigationController!.popToRootViewController(animated: true)
+            })
+        }
+        else {
+            self.navigationController!.popToRootViewController(animated: true)
+        }
+    }
+    
     
 }

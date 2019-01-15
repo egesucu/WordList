@@ -17,6 +17,7 @@ class PreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         englishWordLabel.text = englishText
         germanWordLabel.text = germanText

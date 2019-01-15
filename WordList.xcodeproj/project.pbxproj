@@ -15,6 +15,8 @@
 		9D31635721C068B60082CCC5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31635621C068B60082CCC5 /* TableViewController.swift */; };
 		9D31635B21C06E050082CCC5 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D31635A21C06E050082CCC5 /* PreviewViewController.swift */; };
 		9D97590C21C2FCE600DA3802 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D97590B21C2FCE600DA3802 /* Word.swift */; };
+		9DC2301A21EBC50A00AD990E /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2301921EBC50A00AD990E /* HomeCollectionViewController.swift */; };
+		9DC2301C21EBC51800AD990E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2301B21EBC51800AD990E /* HomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9D31635621C068B60082CCC5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9D31635A21C06E050082CCC5 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		9D97590B21C2FCE600DA3802 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		9DC2301921EBC50A00AD990E /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		9DC2301B21EBC51800AD990E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 				9D97590D21C3063600DA3802 /* Model */,
 				9D31635A21C06E050082CCC5 /* PreviewViewController.swift */,
 				9D31635621C068B60082CCC5 /* TableViewController.swift */,
+				9DC2301921EBC50A00AD990E /* HomeCollectionViewController.swift */,
 				9D31634B21C061080082CCC5 /* Assets.xcassets */,
 				9D31634D21C061080082CCC5 /* LaunchScreen.storyboard */,
 				9D31635021C061080082CCC5 /* Info.plist */,
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9D97590B21C2FCE600DA3802 /* Word.swift */,
+				9DC2301B21EBC51800AD990E /* HomeCollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,7 +233,9 @@
 				9D31634521C061070082CCC5 /* AppDelegate.swift in Sources */,
 				9D31635721C068B60082CCC5 /* TableViewController.swift in Sources */,
 				9D97590C21C2FCE600DA3802 /* Word.swift in Sources */,
+				9DC2301A21EBC50A00AD990E /* HomeCollectionViewController.swift in Sources */,
 				9D31635B21C06E050082CCC5 /* PreviewViewController.swift in Sources */,
+				9DC2301C21EBC51800AD990E /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
