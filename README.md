@@ -20,8 +20,8 @@ Also for troubleshoot user may install latest version of the Realm Pods with Coc
 
 ## Screenshots
 
-![Scene 1](https://raw.githubusercontent.com/egrimo/WordList/Screenshots/Scene1.png)
-![Scene 2](https://raw.githubusercontent.com/egrimo/WordList/Screenshots/Scene2.png)
-![Scene 3](https://raw.githubusercontent.com/egrimo/WordList/Screenshots/Scene3.png)
-![Scene 4](https://raw.githubusercontent.com/egrimo/WordList/Screenshots/Scene4.png)
-![Scene 5](https://raw.githubusercontent.com/egrimo/WordList/Screenshots/Scene5.png)
+![Scene 1](https://github.com/egrimo/WordList/blob/master/Screenshots/Scene1.png)
+![Scene 2](https://github.com/egrimo/WordList/blob/master/Screenshots/Scene2.png)
+![Scene 3](https://github.com/egrimo/WordList/blob/master/Screenshots/Scene3.png)
+![Scene 4](https://github.com/egrimo/WordList/blob/master/Screenshots/Scene4.png)
+![Scene 5](https://github.com/egrimo/WordList/blob/master/Screenshots/Scene5.png)
