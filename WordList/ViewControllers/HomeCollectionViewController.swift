@@ -119,7 +119,7 @@ class HomeCollectionViewController: UICollectionViewController {
             try! self.realm.write {
                 self.realm.add(word)
             }
-            defer{
+            do{
                      self.collectionView.reloadData()
                
             }

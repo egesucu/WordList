@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -89,14 +89,22 @@
 				9D31634421C061070082CCC5 /* AppDelegate.swift */,
 				9D31634821C061070082CCC5 /* Main.storyboard */,
 				9D97590D21C3063600DA3802 /* Model */,
-				9D31635A21C06E050082CCC5 /* PreviewViewController.swift */,
-				9D31635621C068B60082CCC5 /* TableViewController.swift */,
-				9DC2301921EBC50A00AD990E /* HomeCollectionViewController.swift */,
+				9D78AA3122AB11A40041D211 /* ViewControllers */,
 				9D31634B21C061080082CCC5 /* Assets.xcassets */,
 				9D31634D21C061080082CCC5 /* LaunchScreen.storyboard */,
 				9D31635021C061080082CCC5 /* Info.plist */,
 			);
 			path = WordList;
+			sourceTree = "<group>";
+		};
+		9D78AA3122AB11A40041D211 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D31635A21C06E050082CCC5 /* PreviewViewController.swift */,
+				9D31635621C068B60082CCC5 /* TableViewController.swift */,
+				9DC2301921EBC50A00AD990E /* HomeCollectionViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		9D97590D21C3063600DA3802 /* Model */ = {
@@ -142,11 +150,12 @@
 				TargetAttributes = {
 					9D31634021C061060082CCC5 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = 9D31633C21C061060082CCC5 /* Build configuration list for PBXProject "WordList" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -205,22 +214,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WordList/Pods-WordList-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-WordList/Pods-WordList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-WordList/Pods-WordList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordList/Pods-WordList-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordList/Pods-WordList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -386,7 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKA7R98LN8;
 				INFOPLIST_FILE = WordList/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.egesucu.WordList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -408,7 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKA7R98LN8;
 				INFOPLIST_FILE = WordList/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +419,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.egesucu.WordList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
